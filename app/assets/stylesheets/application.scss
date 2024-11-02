@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.navbar {
+    background-color: darkgray;
+    img {
+        max-height: 30vh;
+    }
+}
+
+img {
+    max-height: 10vh;
+}
