@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.2] 2024/11/02
+### Makadafrontendgood
+
+### Added
+- _project.html.erb
+
+### Changed
+- application.html.erb
+    - googleapis font links
+- application.scss
+    - Referenced googleapis fonts
+    - Other front end changes to makadafrontendgood
+- application_controller.rb
+    - Added relevant homepage content
+- /seeds/{#xxx}.rb
+    - Adding some starter content
+- _project.html.erb, show.html.erb
+    - Referencing db fields
+- about_info.yml, contact_info.yml
+    - updated site specific info
+- _nav.html.erb, application.scss
+    - Made nav display more better
+- contact.html.erb
+    - Updated to display appropriate contact_info.yml
+
 ## [1.6.1] 2024/11/01
 ### Conversion
 
@@ -15,6 +40,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - application.scss
     - Basic styling
 - Moved navbar into it's own shared folder like it should be..
+- Should have also changed Title in application.html.erb
 
 ## [1.5.1] 2024/10/19
 ## New Release

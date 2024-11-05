@@ -1,3 +1,5 @@
+=begin
+
 Task.create!(
   task_name: "Edit this task",
   description: "Navigate to seeds.rb file, you'll find me :D.",
@@ -36,3 +38,5 @@ Task.create!(
   estimated_time: 2,
   actual_time: nil
 )
+
+=end

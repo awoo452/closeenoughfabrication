@@ -1,0 +1,14 @@
+<div class="project" id="<%= dom_id project %>">
+  <p>
+    <strong>Title:</strong>
+    <%= project.title %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= project.description %>
+  </p>
+
+  <%= image_tag(project.image) if project.image.present? %>
+
+</div>
