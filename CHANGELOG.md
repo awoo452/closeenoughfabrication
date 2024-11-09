@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.4] 2024/11/09
+### 
+
+### Changed
+- database.yml
+    - Typo lol
+- blog/show.html.erb
+    - Getting rid of img src in favor of something created this century
+- application.scss
+    - border radius on images
+- removing some other unnecessary bloat from related files (things like 'blog' as a heading, etc)
+
 ## [1.6.3] 2024/11/09
 ### Adding site content, other minor updates to front end
 

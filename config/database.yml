@@ -21,7 +21,7 @@ default: &default
 
 development:
   <<: *default
-  database: closenoughfabrication_development
+  database: closeenoughfabrication_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: closenoughfabrication_production
-  username: closenoughfabrication
+  database: closeenoughfabrication_production
+  username: closeenoughfabrication
   password: <%= ENV["CLOSEENOUGHFABRICATION_DATABASE_PASSWORD"] %>
