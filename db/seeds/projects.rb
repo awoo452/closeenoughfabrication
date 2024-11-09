@@ -6,20 +6,19 @@ Project.create!(
   featured: true
 )
 
-=begin
+
 Project.create!(
-  title: "",
-  description: "",
-  image: "",
+  title: "Bendin' Tube | 1964 Ford Falcon",
+  description: "It's a lot easier to build when there’s no floor to get in the way! In all seriousness, this wasn’t the first project we tackled for our longtime friend and fellow Pickled Pirate, Jason, but as always, we were glad to lend a hand on the Falcon where it counted most. Dusting off the Rogue Fab tubing bender was a highlight, and even better was knowing we helped get it back on track at the Estranged Drags this year. Check out our Videos section for event highlights. And yes—don’t worry—the floor was installed before it hit the track!",
+  image: "project2.png",
   url: "",
   featured: true
 )
 
 Project.create!(
-  title: "",
-  description: "",
-  image: "",
+  title: "Full Build | WJ Cherokee",
+  description: "We started with a stock 1999 Jeep Grand Cherokee and went big from there. Up front, we managed to make 18-inch coilovers “fit” alongside a high-pinion Dana 44. In the rear, a 4-linked Ford 9-inch axle with a custom-built truss and Fox air shocks also “fit” pretty nicely. We upgraded with chromoly axle shafts all around, mounted 42-inch tires with beadlocks, and added a custom-length, reinforced rear driveshaft. Check out the “break-in” run in our Videos section!",
+  image: "project3.png",
   url: "",
   featured: true
 )
-=end

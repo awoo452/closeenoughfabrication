@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.3] 2024/11/09
+### Adding site content, other minor updates to front end
+
+### Added
+- project2.png
+- project3.png
+
+### Changed
+- seeds.rb
+    - Other projects (project2, project3) to seed file for starter material
+- index.html.erb
+    - Updated to reflect Article instead of Blog
+- _nav.html.erb
+    - Referenced News & Events instead of Blog
+
 ## [1.6.2] 2024/11/02
 ### Makadafrontendgood
 

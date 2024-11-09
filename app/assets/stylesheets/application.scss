@@ -62,10 +62,17 @@ body {
       }
     }
   }
-  
+
+#about {
+  background-color: lightgray;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
 
 #blog-posts {
-
+    
     img {
         max-height: 50vh;
     }
@@ -80,8 +87,8 @@ body {
 }
 
 #projects {
-    width: 50%;
-ul li img {
+
+  ul li img {
         max-height: 50vh;
     }
 }
