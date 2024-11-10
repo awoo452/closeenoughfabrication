@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.6] 2024/11/10
+### Addressing some initial concerns
+
+### Added
+- projects/show.html.erb
+
+### Changed
+- application.scss
+    - Mobile support
+
 ## [1.6.5] 2024/11/09
 ### You get on Heroku, Front End Cleanup
 ### https://devcenter.heroku.com/articles/getting-started-with-rails7#create-a-new-or-upgrade-an-existing-rails-app

@@ -94,9 +94,14 @@ body {
           }
       }
   }
+  @media screen and (max-width: 1100px) {
+    ul {
+        width: 80%;
+    }
+  }
 }
 
-.blog-post {
+.blog-post, .project {
   text-align: center;
   width: 80%;
   margin-left: 10%;

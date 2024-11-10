@@ -1,0 +1,11 @@
+<h2 style="text-align: center;"><%= @project.title %></h2>
+
+<section class="project">
+  <% if @project.image.present? %>
+    <%= image_tag @project.image, alt: @project.title %>
+  <% end %>
+  
+  <p><%= @project.description %></p>
+  
+  <%= link_to 'Back to Projects', projects_path %>
+</section>
