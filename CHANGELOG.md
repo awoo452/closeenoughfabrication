@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+
+## [1.7.7] 2024/11/16
+### Admin Section | Devise | Create new Projects
+
+### Added
+- projects/new.html.erb
+- projects/form.html.erb
+
+### Changed
+- _nav.html.erb
+    - check for user signed in before allowing creation of new project
+- development.rb
+    - Related to devise implementation
+- migration files
+    - Related to approving users
+- user.rb model
+    - To prevent user from adding approved to their own account
+
 ## [1.6.7] 2024/11/16
 ### Good update, shitty highway
 

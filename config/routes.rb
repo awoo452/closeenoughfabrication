@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'home#index'
   get 'about', to: 'about#index'
   get 'contact', to: 'contact#index'
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   resources :about, only: [:index]
   resources :blog_posts, only: [:index, :show]
   resources :contacts, only: [:index]
-  resources :projects, only: [:index, :show]
+  resources :projects
   resources :tasks, only: [:index, :show]
   resources :videos, only: [:index, :show]
 
