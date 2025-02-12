@@ -2,8 +2,6 @@
 
 <p><strong>Description:</strong> <%= @project.description %></p>
 <p><strong>Image URL:</strong> <%= @project.image %></p>
-<p><strong>Project URL:</strong> <%= @project.url %></p>
-<p><strong>Featured:</strong> <%= @project.featured ? 'Yes' : 'No' %></p>
 
 <% if user_signed_in? %>
   <%= link_to 'Edit', edit_project_path(@project) %>

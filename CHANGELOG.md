@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.8] 2025/02/11
+### New blog post for 55 cage
 
+### Added
+- blog4.png
+
+### Changed
+- projects/show.html.erb
+    - Removing unnecessary fields from front end
 
 ## [1.7.7] 2024/11/16
 ### Admin Section | Devise | Create new Projects
