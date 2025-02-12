@@ -4,11 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.9] 2025/02/11
+### Project front end cleanup
+
+### Changed
+- projects/show.html.erb
+    - Wrapping in 'project' class
+    - showing actual image on front end
+
 ## [1.7.8] 2025/02/11
-### New blog post for 55 cage
+### New project post for 55 cage
 
 ### Added
-- blog4.png
+- project4.png
 
 ### Changed
 - projects/show.html.erb
