@@ -2,12 +2,13 @@
 
 <h1><%= @project.title %></h1>
 
-<p><strong>Description:</strong> <%= @project.description %></p>
+<p><%= @project.description %></p>
 <div class="project-image"><%= image_tag @project.image %></div>
 
 <% if user_signed_in? %>
-  <%= link_to 'Edit', edit_project_path(@project) %>
-<% end %> |
+  <%= link_to 'Edit', edit_project_path(@project) %> | 
+<% end %>
+<%= link_to "See More", @project.url if @project.url.present? %> | 
 <%= link_to 'Back', projects_path %>
 
 </div>
