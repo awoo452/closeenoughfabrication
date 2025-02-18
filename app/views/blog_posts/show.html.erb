@@ -4,7 +4,7 @@
 
     <% if @blog_post.image.present? %>
         <div class="image">
-            <%= image_tag image_path("blog1.png"), alt: @blog_post.title %>
+            <%= image_tag @blog_post.image, alt: @blog_post.title %>
         </div>
     <% end %>
 

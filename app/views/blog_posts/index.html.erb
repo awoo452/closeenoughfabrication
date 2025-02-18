@@ -1,13 +1,14 @@
 <h2 style="text-align: center;">News & Events</h1>
+
 <section id="blog-posts">
-  <ul>
     <% @blog_posts.each do |blog_post| %>
-      <li>
-        <h3><%= blog_post.title %></h3>
-        <p><%= blog_post.description %></p>
-        <%= image_tag blog_post.image if blog_post.image.present? %>
-        <%= link_to 'Read More', blog_post_path(blog_post) %>
-      </li>
-    </ul>
+      <ul>
+        <li>
+          <h3 style="text-align: center;"><%= blog_post.title %></h3>
+          <%= image_tag blog_post.image if blog_post.image.present? %>
+          <p><%= blog_post.description %></p>
+          <%= link_to 'Read More', blog_post_path(blog_post) %>
+        </li>
+      </ul>
   <% end %>
 </section>

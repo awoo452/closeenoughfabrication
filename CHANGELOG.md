@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.14] 2025/02/17
+### Create Blog Post from Front End, auth before doing so (for projects too)
+
+### Added
+- blog_posts/new, edit.html.erb
+
+### Changed
+- blog_posts_controller.rb
+    - copy / pasting from projects controller for updating, same logic applies
+- routes.rb
+    - converting blog_posts to resource altogether
+- nav.html.erb
+    - link to new blog_post if signed in
+- Other blog post related HTML / SCSS for styling
+
+### Changed
+- blog_posts/show.html.erb
+    - Closing that div
+
 ## [1.7.13] 2025/02/17
 ### Quick Fix
 

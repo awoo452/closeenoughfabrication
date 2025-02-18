@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :about, only: [:index]
-  resources :blog_posts, only: [:index, :show]
+  resources :blog_posts
   resources :contacts, only: [:index]
   resources :projects
   resources :tasks, only: [:index, :show]
