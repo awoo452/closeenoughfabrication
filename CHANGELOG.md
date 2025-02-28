@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.15] 2025/02/27
+
+### Changed
+- project4.png
+    - Updated image for this project
+
 ## [1.7.14] 2025/02/17
 ### Create Blog Post from Front End, auth before doing so (for projects too)
 
