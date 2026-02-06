@@ -7,6 +7,8 @@
       allowfullscreen>
     </iframe>
   </div>
+  <%= link_to video_path(video), class: "card-link-overlay", aria: { label: "View #{video.title}" } do %>
+  <% end %>
   <h3 class="card-title truncate-1"><%= video.title %></h3>
   <p class="card-text truncate-5"><%= video.description %></p>
 </li>

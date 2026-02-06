@@ -164,6 +164,7 @@ body {
   width: 100%;
   flex: 1 1 280px;
   max-width: 360px;
+  position: relative;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -181,6 +182,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 
     img {
       width: 100%;
@@ -236,6 +239,12 @@ body {
   color: var(--color-accent-dark);
 }
 
+.card-link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .video-card .card-media {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -254,7 +263,8 @@ body {
 }
 
 .blog-post,
-.project {
+.project,
+.video {
   text-align: center;
   width: 100%;
   max-width: var(--content-max);
@@ -285,6 +295,21 @@ body {
     height: auto;
     width: auto;
     border-radius: var(--radius-md);
+  }
+}
+
+.video .card-media {
+  width: 100%;
+  max-width: var(--content-max);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin: 1.5rem auto;
+  background: var(--color-surface-muted);
+
+  iframe {
+    width: 100%;
+    height: 100%;
   }
 }
 
