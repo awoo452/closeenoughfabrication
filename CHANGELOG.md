@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.8.3] 2026/02/06
+## [1.8.4] 2026/02/05
+
+### Changed
+- Hide featured sections on the home page when there is no content to display.
+- Truncated project titles and descriptions on the projects index view.
+- Applied the same title/description truncation rules to blog post cards.
+- Applied the same title/description truncation rules to video cards.
+
+## [1.8.3] 2026/02/05
 
 ### Changed
 - Refactored home, blog post, project, and video views into reusable card partials.
