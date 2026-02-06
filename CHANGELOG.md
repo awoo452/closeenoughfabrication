@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.2] 2026/01/24
+
+### Changed
+- Extracted controller logic into service objects to standardize flows across the app.
+- Added domain-scoped services for data loading and CRUD operations to slim controllers.
+
 ## [1.8.1] 2026/01/22
 
 ### Changed

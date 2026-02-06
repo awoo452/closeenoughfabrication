@@ -1,12 +1,15 @@
 class BlogPostsController < ApplicationController
-  before_action :set_blog_post, only: %i[show edit update destroy]
+  before_action :set_blog_post, only: %i[edit update destroy]
   before_action :authenticate_user!, only: %i[create edit update destroy]
 
   def index
-    @blog_posts = BlogPost.all
+    data = BlogPosts::IndexData.call
+    @blog_posts = data.blog_posts
   end
 
   def show
+    data = BlogPosts::ShowData.call(blog_post_id: params[:id])
+    @blog_post = data.blog_post
   end
 
   def new
@@ -14,8 +17,10 @@ class BlogPostsController < ApplicationController
   end
 
   def create
-    @blog_post = BlogPost.new(blog_post_params)
-    if @blog_post.save
+    result = BlogPosts::CreateBlogPost.call(params: blog_post_params)
+    @blog_post = result.blog_post
+
+    if result.success?
       redirect_to @blog_post, notice: 'Blog Post was successfully created.'
     else
       render :new
@@ -26,7 +31,10 @@ class BlogPostsController < ApplicationController
   end
 
   def update
-    if @blog_post.update(blog_post_params)
+    result = BlogPosts::UpdateBlogPost.call(blog_post: @blog_post, params: blog_post_params)
+    @blog_post = result.blog_post
+
+    if result.success?
       redirect_to @blog_post, notice: 'Blog Post was successfully updated.'
     else
       render :edit
@@ -34,7 +42,7 @@ class BlogPostsController < ApplicationController
   end
 
   def destroy
-    @blog_post.destroy
+    BlogPosts::DestroyBlogPost.call(blog_post: @blog_post)
     redirect_to blog_posts_url, notice: 'Blog Post was successfully destroyed.'
   end
 

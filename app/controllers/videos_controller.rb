@@ -1,9 +1,11 @@
 class VideosController < ApplicationController
   def index
-    @videos = Video.all
+    data = Videos::IndexData.call
+    @videos = data.videos
   end
 
   def show
-    @video = Video.find(params[:id])
+    data = Videos::ShowData.call(video_id: params[:id])
+    @video = data.video
   end
 end

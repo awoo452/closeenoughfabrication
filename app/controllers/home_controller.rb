@@ -1,12 +1,8 @@
 class HomeController < ApplicationController
   def index
-    
-    # Featured Projects
-    @featured_projects = Project.where(featured: true)
-    @featured_blog_posts = BlogPost.where(featured: true)
-    @featured_videos = Video.where(featured: true)
-    
-    #
-    
+    data = Home::IndexData.call
+    @featured_projects = data.featured_projects
+    @featured_blog_posts = data.featured_blog_posts
+    @featured_videos = data.featured_videos
   end
 end

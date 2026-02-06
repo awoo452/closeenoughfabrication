@@ -1,12 +1,15 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: %i[show edit update destroy]
+  before_action :set_project, only: %i[edit update destroy]
   before_action :authenticate_user!, only: %i[create edit update destroy]
 
   def index
-    @projects = Project.all
+    data = Projects::IndexData.call
+    @projects = data.projects
   end
 
   def show
+    data = Projects::ShowData.call(project_id: params[:id])
+    @project = data.project
   end
 
   def new
@@ -14,8 +17,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
-    if @project.save
+    result = Projects::CreateProject.call(params: project_params)
+    @project = result.project
+
+    if result.success?
       redirect_to @project, notice: 'Project was successfully created.'
     else
       render :new
@@ -26,7 +31,10 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if @project.update(project_params)
+    result = Projects::UpdateProject.call(project: @project, params: project_params)
+    @project = result.project
+
+    if result.success?
       redirect_to @project, notice: 'Project was successfully updated.'
     else
       render :edit
@@ -34,7 +42,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project.destroy
+    Projects::DestroyProject.call(project: @project)
     redirect_to projects_url, notice: 'Project was successfully destroyed.'
   end
 

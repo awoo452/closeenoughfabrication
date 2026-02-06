@@ -1,5 +1,6 @@
 class ContactController < ApplicationController
   def index
-    @contact_info = YAML.load_file(Rails.root.join('config', 'contact_info.yml'))
+    data = Contact::IndexData.call
+    @contact_info = data.contact_info
   end
 end
