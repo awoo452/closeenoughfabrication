@@ -1,30 +1,30 @@
-<div class="blog-post">
-
+<article class="blog-post">
+  <header class="content-stack">
     <h1><%= @blog_post.title %></h1>
 
     <% if @blog_post.image.present? %>
-        <div class="image">
-            <%= image_tag @blog_post.image, alt: @blog_post.title %>
-        </div>
+      <div class="image">
+        <%= image_tag @blog_post.image, alt: @blog_post.title %>
+      </div>
     <% end %>
-
-    <div class="title">
-        <%= @blog_post.title %>
-    </div>
 
     <% if @blog_post.description.present? %>
-        <div class="description">
-            <%= @blog_post.description %>
-        </div>
+      <p class="description">
+        <%= @blog_post.description %>
+      </p>
     <% end %>
+  </header>
 
-    <div class="body">
-        <%= simple_format(@blog_post.body) %>
-    </div>
-    <p><em>Posted: <%= @blog_post.created_at.strftime("%B %d, %Y") %></em></p> <!-- Added line -->
-    <div class="navigation">
-    <%= link_to 'Back to News & Events', blog_posts_path %> | 
-    <%= link_to 'Home', root_path %>
-    </div>
-    
-</div>
+  <div class="body">
+    <%= simple_format(@blog_post.body) %>
+  </div>
+
+  <footer class="post-meta">
+    <p><em>Posted: <%= @blog_post.created_at.strftime("%B %d, %Y") %></em></p>
+  </footer>
+
+  <nav class="navigation">
+    <%= link_to "Back to News & Events", blog_posts_path %> |
+    <%= link_to "Home", root_path %>
+  </nav>
+</article>

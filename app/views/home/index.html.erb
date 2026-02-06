@@ -1,41 +1,20 @@
-<h2 style="text-align: center;">Featured Projects</h2>
-<section id="featured_projects">
-  <% @featured_projects.each do |project| %>
-  <ul>
-    <li>
-      <h3><%= project.title %></h3>
-      <%= image_tag project.image if project.image.present? %>
-    </li>
-    <li>
-      <%= link_to "Show this Project", project %>
-    </li>
+<section id="featured_projects" class="feature-section">
+  <h2 class="section-title">Featured Projects</h2>
+  <ul class="card-list">
+    <%= render partial: "projects/card", collection: @featured_projects, as: :project %>
   </ul>
-  <% end %>
 </section>
-<hr>
-<h2 style="text-align: center;">Featured Articles</h2>
-<section id="blog-posts">
-    <% @featured_blog_posts.each do |blog_post| %>
-      <ul>
-        <li>
-          <h3 style="text-align: center;"><%= blog_post.title %></h3>
-          <%= image_tag blog_post.image if blog_post.image.present? %>
-          <p><%= blog_post.description %></p>
-          <%= link_to 'Read More', blog_post_path(blog_post) %>
-        </li>
-      </ul>
-  <% end %>
+
+<section id="blog-posts" class="feature-section">
+  <h2 class="section-title">Featured Articles</h2>
+  <ul class="card-list">
+    <%= render partial: "blog_posts/card", collection: @featured_blog_posts, as: :blog_post %>
+  </ul>
 </section>
-<hr>
-<h2 style="text-align: center">Featured Videos</h2>
-<section id="featured_videos">
-    <% @featured_videos.each do |video| %>
-      <ul>
-        <li>
-          <h3><%= video.title %></h3>
-          <iframe src='https://www.youtube.com/embed/<%= video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
-          <p><%= video.description %></p>
-        </li>
-      </ul>
-    <% end %>
+
+<section id="featured_videos" class="feature-section">
+  <h2 class="section-title">Featured Videos</h2>
+  <ul class="card-list">
+    <%= render partial: "videos/card", collection: @featured_videos, as: :video %>
+  </ul>
 </section>

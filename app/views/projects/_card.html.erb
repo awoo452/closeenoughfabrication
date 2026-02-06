@@ -1,0 +1,12 @@
+<li class="card project-card">
+  <h3 class="card-title"><%= project.title %></h3>
+
+  <% if project.image.present? %>
+    <div class="card-media">
+      <%= image_tag project.image, alt: project.title %>
+    </div>
+  <% end %>
+
+  <p class="card-text"><%= project.description %></p>
+  <%= link_to "Show this Project", project, class: "card-link" %>
+</li>

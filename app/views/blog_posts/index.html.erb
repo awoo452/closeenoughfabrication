@@ -1,14 +1,6 @@
-<h2 style="text-align: center;">News & Events</h1>
-
-<section id="blog-posts">
-    <% @blog_posts.each do |blog_post| %>
-      <ul>
-        <li>
-          <h3 style="text-align: center;"><%= blog_post.title %></h3>
-          <%= image_tag blog_post.image if blog_post.image.present? %>
-          <p><%= blog_post.description %></p>
-          <%= link_to 'Read More', blog_post_path(blog_post) %>
-        </li>
-      </ul>
-  <% end %>
+<section id="blog-posts" class="content-section">
+  <h2 class="section-title">News & Events</h2>
+  <ul class="card-list">
+    <%= render partial: "blog_posts/card", collection: @blog_posts, as: :blog_post %>
+  </ul>
 </section>

@@ -1,11 +1,13 @@
-<section id="contact">
-  <h1>Contact Us</h1>
+<section id="contact" class="content-section">
+  <h1 class="section-title">Contact Us</h1>
 
-  <p>We'd love to hear from you! If you have any questions, comments, or suggestions, feel free to reach out to us on Instagram.</p>
+  <div class="content-stack">
+    <p>We'd love to hear from you! If you have any questions, comments, or suggestions, feel free to reach out to us on Instagram.</p>
 
-  <h2>Follow Us</h2>
-  <p>Stay connected with us on social media!</p>
-  <ul>
-    <li><a href="<%= @contact_info['social_media']['instagram'] %>" target="_blank">Instagram</a></li>
-  </ul>
+    <div class="contact-block">
+      <h2 class="section-title">Follow Us</h2>
+      <p>Stay connected with us on social media!</p>
+      <a href="<%= @contact_info["social_media"]["instagram"] %>" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
 </section>

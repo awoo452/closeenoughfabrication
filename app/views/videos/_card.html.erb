@@ -1,0 +1,12 @@
+<li class="card video-card">
+  <div class="card-media">
+    <iframe
+      src="https://www.youtube.com/embed/<%= video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>"
+      title="<%= video.title %>"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <h3 class="card-title"><%= video.title %></h3>
+  <p class="card-text"><%= video.description %></p>
+</li>

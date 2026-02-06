@@ -1,12 +1,6 @@
-<h2 style="text-align: center;">Videos</h2>
-<section id="videos">  
-  <% @videos.each do |video| %>
-    <ul>
-      <li>
-        <iframe src='https://www.youtube.com/embed/<%= video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
-        <h3><%= video.title %></h3>
-        <p><%= video.description %></p>
-      </li>
-    </ul>
-    <% end %>
+<section id="videos" class="content-section">
+  <h2 class="section-title">Videos</h2>
+  <ul class="card-list">
+    <%= render partial: "videos/card", collection: @videos, as: :video %>
+  </ul>
 </section>

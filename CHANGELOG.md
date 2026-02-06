@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.3] 2026/02/06
+
+### Changed
+- Refactored home, blog post, project, and video views into reusable card partials.
+- Cleaned up HTML structure and removed inline styling.
+- Updated base card/list styling to match the new markup.
+- Standardized layout and card styling with shared variables, sizing, and spacing tweaks.
+- Removed `hr` separators from home and nav layout and dropped related styles.
+
 ## [1.8.2] 2026/01/24
 
 ### Changed

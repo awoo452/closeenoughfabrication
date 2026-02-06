@@ -1,14 +1,21 @@
-<div class="project">
+<article class="project">
+  <header class="content-stack">
+    <h1><%= @project.title %></h1>
+    <p><%= @project.description %></p>
+  </header>
 
-<h1><%= @project.title %></h1>
+  <% if @project.image.present? %>
+    <div class="project-image">
+      <%= image_tag @project.image, alt: @project.title %>
+    </div>
+  <% end %>
 
-<p><%= @project.description %></p>
-<div class="project-image"><%= image_tag @project.image %></div>
-
-<% if user_signed_in? %>
-  <%= link_to 'Edit', edit_project_path(@project) %> | 
-<% end %>
-<%= link_to "See More", @project.url if @project.url.present? %> | 
-<%= link_to 'Back', projects_path %>
-
-</div>
+  <nav class="navigation">
+    <% if user_signed_in? %>
+      <%= link_to "Edit", edit_project_path(@project) %> |
+    <% end %>
+    <%= link_to "See More", @project.url if @project.url.present? %>
+    <% if @project.url.present? %> | <% end %>
+    <%= link_to "Back", projects_path %>
+  </nav>
+</article>
