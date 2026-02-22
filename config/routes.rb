@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'about', to: 'about#index'
   get 'contact', to: 'contact#index'
+  get "/terms", to: "legal#terms"
+  get "/privacy", to: "legal#privacy"
   get 'tasks', to: 'tasks#index'
   get 'tasks/show'
   get 'blog_posts', to: 'blog_posts#index'

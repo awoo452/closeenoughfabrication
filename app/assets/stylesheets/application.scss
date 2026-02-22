@@ -340,6 +340,7 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 2em;
   a {
     color: var(--color-nav-text);
@@ -353,4 +354,13 @@ iframe {
   #author {
     margin-left: 2px;
   }
+}
+
+.footer-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-sep {
+  margin: 0 0.5em;
 }
