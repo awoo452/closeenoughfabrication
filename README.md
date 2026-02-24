@@ -8,13 +8,13 @@ Close Enough Fabrication is a Rails app that serves a public site with featured 
 - Projects and videos listings with detail pages.
 
 **Tech Stack**
-- Ruby 3.2.2
-- Rails 7.1.4
+- Ruby 4.0.1
+- Rails 8.1.2
 - Bootstrap 5
 - SassC
 
 **Local Development**
-1. Install Ruby 3.2.2.
+1. Install Ruby 4.0.1.
 1. `bundle install`
 1. `bin/rails server`
 
