@@ -11,9 +11,6 @@
   <% end %>
 
   <nav class="navigation">
-    <% if user_signed_in? %>
-      <%= link_to "Edit", edit_project_path(@project) %> |
-    <% end %>
     <%= link_to "See More", @project.url if @project.url.present? %>
     <% if @project.url.present? %> | <% end %>
     <%= link_to "Back", projects_path %>

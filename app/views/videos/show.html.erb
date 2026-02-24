@@ -7,15 +7,22 @@
   </header>
 
   <div class="card-media">
-    <iframe
-      src="https://www.youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>"
-      title="<%= @video.title %>"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+    <% if @video.embed_url.present? %>
+      <iframe
+        src="<%= @video.embed_url %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>"
+        title="<%= @video.title %>"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    <% elsif @video.image.present? %>
+      <%= image_tag @video.image, alt: @video.title %>
+    <% end %>
   </div>
 
   <nav class="navigation">
+    <% if @video.url.present? %>
+      <%= link_to "See More", @video.url %> |
+    <% end %>
     <%= link_to "Back to Videos", videos_path %> |
     <%= link_to "Home", root_path %>
   </nav>

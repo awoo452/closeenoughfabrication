@@ -7,15 +7,6 @@
   </section>
 <% end %>
 
-<% if @featured_blog_posts.any? %>
-  <section id="blog-posts" class="feature-section">
-    <h2 class="section-title">Featured Articles</h2>
-    <ul class="card-list">
-      <%= render partial: "blog_posts/card", collection: @featured_blog_posts, as: :blog_post %>
-    </ul>
-  </section>
-<% end %>
-
 <% if @featured_videos.any? %>
   <section id="featured_videos" class="feature-section">
     <h2 class="section-title">Featured Videos</h2>
