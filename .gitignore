@@ -38,3 +38,4 @@ COMMANDS.md
 .DS_Store
 app/.DS_Store
 app/assets/.DS_Store
+ai_dev_agent.py

@@ -498,3 +498,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
     - Other routes set to page#index
 - _navbar.html.erb
     - Contains links to each index action, as set in routes
+
+## Unreleased
+- improved README formatting and descriptions for features tech stack and local development

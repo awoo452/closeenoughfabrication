@@ -1,22 +1,26 @@
-# Close Enough Fabrication
+# closeenoughfabrication
 
-Close Enough Fabrication is a Rails app that serves a public site with featured content.
+Welcome to the closeenoughfabrication app. This is a Rails application that serves a public site featuring select content.
 
-**Features**
-- Home page with featured projects and videos.
-- Public pages: About and Contact.
-- Projects and videos listings with detail pages.
+## Features
 
-**Tech Stack**
-- Ruby 4.0.1
-- Rails 8.1.2
-- Bootstrap 5
-- SassC
+- **Home Page:** Showcases featured projects and videos.
+- **Public Pages:** Includes About and Contact pages.
+- **Project & Video Listings:** Browse all projects and videos with individual detail pages.
 
-**Local Development**
+## Tech Stack
+
+- **Ruby:** 4.0.1
+- **Rails:** 8.1.2
+- **Bootstrap:** 5
+- **SassC**
+
+## Local Development
+
 1. Install Ruby 4.0.1.
-1. `bundle install`
-1. `bin/rails server`
+2. Run `bundle install`.
+3. Start the server with `bin/rails server`.
 
-**Changelog**
-See `CHANGELOG.md` for notable changes.
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md) for notable changes.
