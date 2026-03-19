@@ -3,13 +3,6 @@
     <header class="content-stack">
       <h1 class="section-title"><%= h(@doc.title) %></h1>
       <p><%= h(@doc.summary) %></p>
-      <p><%= h(@doc.category) %> · <%= h(@doc.status.capitalize) %> · Updated <%= h(@doc.updated_at) %></p>
-      <% if @doc.audience.any? %>
-        <p>Audience: <%= h(@doc.audience.join(", ")) %></p>
-      <% end %>
-      <% if @doc.tags.any? %>
-        <p>Tags: <%= @doc.tags.map { |tag| h(tag) }.join(" · ") %></p>
-      <% end %>
     </header>
 
     <% @doc.sections.each do |section| %>
