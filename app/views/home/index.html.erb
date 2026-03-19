@@ -1,0 +1,17 @@
+<% if @featured_projects.any? %>
+  <section id="featured_projects" class="feature-section">
+    <h2 class="section-title">Featured Projects</h2>
+    <ul class="card-list">
+      <%= render partial: "projects/card", collection: @featured_projects, as: :project %>
+    </ul>
+  </section>
+<% end %>
+
+<% if @featured_videos.any? %>
+  <section id="featured_videos" class="feature-section">
+    <h2 class="section-title">Featured Videos</h2>
+    <ul class="card-list">
+      <%= render partial: "videos/card", collection: @featured_videos, as: :video %>
+    </ul>
+  </section>
+<% end %>

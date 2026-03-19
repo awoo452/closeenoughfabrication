@@ -1,0 +1,101 @@
+<section class="content-section">
+  <article class="doc content-stack">
+    <header class="content-stack">
+      <h1 class="section-title"><%= h(@doc.title) %></h1>
+      <p><%= h(@doc.summary) %></p>
+      <p><%= h(@doc.category) %> · <%= h(@doc.status.capitalize) %> · Updated <%= h(@doc.updated_at) %></p>
+      <% if @doc.audience.any? %>
+        <p>Audience: <%= h(@doc.audience.join(", ")) %></p>
+      <% end %>
+      <% if @doc.tags.any? %>
+        <p>Tags: <%= @doc.tags.map { |tag| h(tag) }.join(" · ") %></p>
+      <% end %>
+    </header>
+
+    <% @doc.sections.each do |section| %>
+      <section class="doc-section content-stack">
+        <% if section["heading"].present? %>
+          <h2 class="section-title"><%= h(section["heading"]) %></h2>
+        <% end %>
+
+        <% Array(section["body"]).each do |paragraph| %>
+          <p><%= h(paragraph) %></p>
+        <% end %>
+
+        <% if section["bullets"].present? %>
+          <ul class="doc-bullets">
+            <% section["bullets"].each do |bullet| %>
+              <li><%= h(bullet) %></li>
+            <% end %>
+          </ul>
+        <% end %>
+
+        <% if section["steps"].present? %>
+          <ol class="doc-steps">
+            <% section["steps"].each do |step| %>
+              <li><%= h(step) %></li>
+            <% end %>
+          </ol>
+        <% end %>
+
+        <% if section["code"].present? %>
+          <pre><code><%= h(section["code"]) %></code></pre>
+        <% end %>
+
+        <% images = Array(section["images"]) %>
+        <% videos = Array(section["videos"]) %>
+        <% if images.any? || videos.any? %>
+          <div class="content-stack">
+            <% images.each_with_index do |image, index| %>
+              <figure>
+                <img src="<%= docs_image_src(image) %>" alt="<%= h(docs_image_alt(image, index + 1)) %>" loading="lazy" />
+                <% caption = docs_image_caption(image) %>
+                <% if caption.present? %>
+                  <figcaption><%= h(caption) %></figcaption>
+                <% end %>
+              </figure>
+            <% end %>
+
+            <% videos.each_with_index do |video, index| %>
+              <% embed_url = docs_youtube_embed_url(video) %>
+              <% caption = docs_video_caption(video) %>
+              <div>
+                <% if embed_url.present? %>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="<%= embed_url %>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                  <% if caption.present? %>
+                    <p><%= h(caption) %></p>
+                  <% end %>
+                <% else %>
+                  <p>Video <%= index + 1 %> — unsupported URL</p>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </section>
+    <% end %>
+
+    <% if @doc.links.present? %>
+      <section class="doc-section content-stack">
+        <h2 class="section-title">Related paths</h2>
+        <ul class="doc-bullets">
+          <% @doc.links.each do |link| %>
+            <li><span class="mono"><%= h(link["path"]) %></span> — <%= h(link["label"]) %></li>
+          <% end %>
+        </ul>
+      </section>
+    <% end %>
+
+    <nav class="navigation">
+      <%= link_to "Back", docs_path %>
+    </nav>
+  </article>
+</section>

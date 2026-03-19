@@ -1,0 +1,152 @@
+[
+  {
+    "id": "welcome-basics",
+    "title": "Welcome and Basics",
+    "summary": "A quick intro to the site, what you can find here, and how to navigate it.",
+    "category": "Getting Started",
+    "tags": ["overview", "basics"],
+    "audience": ["Public"],
+    "status": "stable",
+    "updated_at": "2026-03-18",
+    "sections": [
+      {
+        "heading": "Welcome",
+        "body": [
+          "Close Enough Fabrication is a public portfolio of off-road fabrication work, project highlights, and build notes.",
+          "Everything here is designed to be easy to browse and easy to share as new work is completed."
+        ]
+      },
+      {
+        "heading": "How to navigate",
+        "bullets": [
+          "Projects shows full build pages with photos and details.",
+          "Videos collects walkthroughs, quick demos, and highlights.",
+          "Contact is the best place to start a new request."
+        ]
+      },
+      {
+        "heading": "What to expect",
+        "body": [
+          "Some older builds are intentionally brief when the work predates this site.",
+          "If you do not see what you need, reach out and we can point you in the right direction."
+        ]
+      }
+    ],
+    "links": [
+      { "label": "Browse projects", "path": "/projects" },
+      { "label": "Browse videos", "path": "/videos" },
+      { "label": "Contact", "path": "/contact" }
+    ]
+  },
+  {
+    "id": "projects-and-videos",
+    "title": "Projects and Videos",
+    "summary": "What is included on project pages and video pages, plus what to expect from updates.",
+    "category": "Content",
+    "tags": ["projects", "videos"],
+    "audience": ["Public"],
+    "status": "stable",
+    "updated_at": "2026-03-18",
+    "sections": [
+      {
+        "heading": "Projects",
+        "body": [
+          "Project pages include a short summary, photos, and a link when there is more to share.",
+          "Some entries are highlights only when the work was completed before the site launched."
+        ]
+      },
+      {
+        "heading": "Videos",
+        "body": [
+          "Video pages highlight finished work, quick test runs, or specific fabrication steps.",
+          "Not every project gets a video, but we add them when it helps explain the build."
+        ]
+      },
+      {
+        "heading": "Updates",
+        "body": [
+          "Updates are posted as builds wrap or when there is something worth sharing.",
+          "If you are looking for a specific project update, feel free to ask."
+        ]
+      }
+    ],
+    "links": [
+      { "label": "Project index", "path": "/projects" },
+      { "label": "Video index", "path": "/videos" }
+    ]
+  },
+  {
+    "id": "requests-and-collaboration",
+    "title": "Requests and Collaboration",
+    "summary": "What helps us quote or plan a build, and how to reach us.",
+    "category": "Contact",
+    "tags": ["requests", "planning"],
+    "audience": ["Public"],
+    "status": "stable",
+    "updated_at": "2026-03-18",
+    "sections": [
+      {
+        "heading": "What to include",
+        "bullets": [
+          "Vehicle year, make, model, and any existing modifications.",
+          "Goal of the build (trail use, daily driver, recovery, overlanding, etc.).",
+          "Timeline and any hard deadlines if they exist.",
+          "Budget range if you are comfortable sharing it."
+        ]
+      },
+      {
+        "heading": "Getting started",
+        "steps": [
+          "Send a short description through the Contact page.",
+          "We will reply with next steps and availability.",
+          "Once the direction is set, we will walk through details together."
+        ]
+      },
+      {
+        "heading": "Helpful extras",
+        "body": [
+          "Photos or a short walkaround video help us move faster during planning."
+        ]
+      }
+    ],
+    "links": [
+      { "label": "Contact", "path": "/contact" }
+    ]
+  },
+  {
+    "id": "policies-and-safety",
+    "title": "Policies and Safety",
+    "summary": "A plain-language overview of content accuracy, safety, and privacy.",
+    "category": "Policies",
+    "tags": ["safety", "privacy"],
+    "audience": ["Public"],
+    "status": "stable",
+    "updated_at": "2026-03-18",
+    "sections": [
+      {
+        "heading": "Content accuracy",
+        "body": [
+          "We do our best to keep information current, but builds evolve and details can change.",
+          "If something looks outdated, send a note and we will correct it."
+        ]
+      },
+      {
+        "heading": "Safety",
+        "body": [
+          "Fabrication and off-road work can be dangerous. Always use proper safety gear and verified procedures.",
+          "If you plan to replicate a build, consult a professional for your specific setup."
+        ]
+      },
+      {
+        "heading": "Privacy",
+        "body": [
+          "We do not sell personal data. See the Privacy Policy for details."
+        ]
+      }
+    ],
+    "links": [
+      { "label": "Terms of use", "path": "/terms" },
+      { "label": "Privacy policy", "path": "/privacy" }
+    ]
+  }
+]

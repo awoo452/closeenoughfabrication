@@ -1,0 +1,18 @@
+<li class="card video-card">
+  <div class="card-media">
+    <% if video.embed_url.present? %>
+      <iframe
+        src="<%= video.embed_url %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>"
+        title="<%= video.title %>"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    <% elsif video.image.present? %>
+      <%= image_tag video.image, alt: video.title %>
+    <% end %>
+  </div>
+  <%= link_to video_path(video), class: "card-link-overlay", aria: { label: "View #{video.title}" } do %>
+  <% end %>
+  <h3 class="card-title truncate-1"><%= video.title %></h3>
+  <p class="card-text truncate-5"><%= video.description %></p>
+</li>

@@ -1,0 +1,46 @@
+<section id="docs" class="content-section">
+  <div class="content-stack docs-index-header">
+    <h1 class="section-title">Documentation</h1>
+    <p>Public documentation for the site.</p>
+  </div>
+
+  <%= form_with url: docs_path, method: :get, local: true, html: { class: "docs-search" } do |form| %>
+    <div class="content-stack">
+      <div class="docs-search-row">
+        <%= form.search_field :q, value: @query, placeholder: "Search docs", class: "docs-search-field" %>
+        <%= form.submit "Search", class: "docs-search-submit" %>
+        <p class="docs-index-meta"><%= pluralize(@docs.count, "doc") %></p>
+
+        <% if @query.present? %>
+          <%= link_to "Clear", docs_path, class: "docs-search-clear" %>
+        <% end %>
+      </div>
+      <% if @query.present? %>
+        <p><%= pluralize(@docs.count, "result") %> for "<%= h(@query) %>"</p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% @categories.each do |category, docs| %>
+    <section class="content-stack docs-category">
+      <div class="docs-category-header">
+        <h2 class="section-title"><%= h(category) %></h2>
+        <p class="docs-category-count"><%= pluralize(docs.count, "doc") %></p>
+      </div>
+      <ul class="card-list">
+        <% docs.each do |doc| %>
+          <li class="card doc-card">
+            <p class="card-text"><%= h(doc.status.capitalize) %> · <%= h(doc.audience.join(", ")) %></p>
+            <h3 class="card-title truncate-2"><%= h(doc.title) %></h3>
+            <p class="card-text truncate-5"><%= h(doc.summary) %></p>
+            <% if doc.tags.any? %>
+              <p class="card-text"><%= doc.tags.map { |tag| h(tag) }.join(" · ") %></p>
+            <% end %>
+            <p class="card-text">Updated <%= h(doc.updated_at) %></p>
+            <%= link_to "Read this doc", doc_path(doc.id), class: "card-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
+</section>
