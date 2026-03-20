@@ -30,7 +30,9 @@ module Closeenoughfabrication
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    config.active_storage.variant_processor = :disabled
+    if config.respond_to?(:active_storage)
+      config.active_storage.variant_processor = :disabled
+    end
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
