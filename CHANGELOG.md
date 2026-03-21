@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.6] 2026/03/20
+### Added
+- Added GitHub Actions CI with Postgres-backed test and system test jobs.
+### Changed
+- Run system tests unconditionally in CI to avoid workflow file parsing issues.
+- Use the rack test driver for system tests to avoid selenium setup issues.
+### Fixed
+- Ensured user fixtures include unique emails to satisfy database constraints.
+
 ## [1.0.5] 2026/03/19
 ### Changed
 - Guarded Active Storage variant configuration when Active Storage is not loaded.
