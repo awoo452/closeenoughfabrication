@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "contact", to: "contact#index"
   get "/terms", to: "legal#terms"
   get "/privacy", to: "legal#privacy"
+  get "/accessibility", to: "legal#accessibility"
 
   resources :about, only: [:index]
   resources :contacts, only: [:index]
