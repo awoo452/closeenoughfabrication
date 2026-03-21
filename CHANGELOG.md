@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.7] 2026/03/20
+### Changed
+- CI runs `bin/rails test` and `bin/rails test:system` without database tasks since Active Record is not loaded.
+
 ## [1.0.6] 2026/03/20
 ### Added
-- Added GitHub Actions CI with Postgres-backed test and system test jobs.
+- Added GitHub Actions CI to run unit and system tests.
 ### Changed
 - Run system tests unconditionally in CI to avoid workflow file parsing issues.
 - Use the rack test driver for system tests to avoid selenium setup issues.
