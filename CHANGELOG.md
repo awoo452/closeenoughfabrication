@@ -4,11 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.10] 2026/03/21
+## [1.0.11] - 2026-03-21
+### Changed
+- Standardized changelog dates to YYYY-MM-DD.
+
+## [1.0.10] - 2026-03-21
 ### Changed
 - Standardized legal pages on JSON-backed content and added the Accessibility page.
 
-## [1.0.9] 2026/03/20
+## [1.0.9] - 2026-03-20
 ### Added
 - Added controller coverage for docs and legal pages.
 - Added model coverage for JSON-backed projects and video embed logic.
@@ -16,15 +20,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - Adjusted missing-doc expectation when ActiveRecord is not loaded.
 
-## [1.0.8] 2026/03/20
+## [1.0.8] - 2026-03-20
 ### Fixed
 - Updated controller tests to use the current route helpers and existing records.
 
-## [1.0.7] 2026/03/20
+## [1.0.7] - 2026-03-20
 ### Changed
 - CI runs `bin/rails test` and `bin/rails test:system` without database tasks since Active Record is not loaded.
 
-## [1.0.6] 2026/03/20
+## [1.0.6] - 2026-03-20
 ### Added
 - Added GitHub Actions CI to run unit and system tests.
 ### Changed
@@ -33,29 +37,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - Ensured user fixtures include unique emails to satisfy database constraints.
 
-## [1.0.5] 2026/03/19
+## [1.0.5] - 2026-03-19
 ### Changed
 - Guarded Active Storage variant configuration when Active Storage is not loaded.
 
-## [1.0.4] 2026/03/19
+## [1.0.4] - 2026-03-19
 ### Changed
 - Disabled Active Storage variant processing to suppress image_processing warnings.
 - Upgraded Puma to 7.2.0 and refreshed Gemfile.lock.
 
-## [1.0.3] 2026/03/19
+## [1.0.3] - 2026-03-19
 ### Changed
 - Refreshed Gemfile.lock via bundle update for Ruby 4.0.2.
 
-## [1.0.2] 2026/03/19
+## [1.0.2] - 2026-03-19
 ### Changed
 - Pinned Ruby to 4.0.2 across runtime files and Gemfile.lock.
 
-## [1.0.1] 2026/03/18
+## [1.0.1] - 2026-03-18
 
 ### Changed
 - Removed internal doc metadata (category/status/audience/tags) from public doc headers.
 
-## [1.0.0] 2026/03/18
+## [1.0.0] - 2026-03-18
 
 ### Added
 - Public documentation section backed by `docs/docs.json` using the shared docs schema.
@@ -68,21 +72,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Styled the docs search bar to match the site spacing and controls.
 - Centered docs index header/category text and fixed pluralization for doc counts.
 
-## [x.x.x] 2026/03/06
+## [x.x.x] - 2026-03-06
 ### Removed
 - Stuff that should never have been added in the first place as part of our 'migration'
 - U can lead chat to water but u can't make it think
 
-## [x.x.x] 2026/03/06
+## [x.x.x] - 2026-03-06
 ### Removed
 - Dropped unused project views (`projects/new`, `projects/edit`).
 - Removed unused images: `blog1.png`, `falcon2.jpg`, `image1.png`, `image2.png`, `image3.png`, `logo.png`, `project3.jpg`.
 
-## [x.x.x] 2026/02/24
+## [x.x.x] - 2026-02-24
 ### Changed
 - Pinned Ruby to 4.0.1 and Rails to 8.1.2 (aligned with getawd).
 
-## [x.x.x] 2026/02/24
+## [x.x.x] - 2026-02-24
 ### Added
 - Static project data at `config/projects.json`.
 - Static video data at `config/videos.json`.
@@ -92,11 +96,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Dropped blog posts and tasks from the app.
 - Simplified routes, controllers, and views to read-only projects/videos.
 
-## [x.x.x] 2026/02/22
+## [x.x.x] - 2026-02-22
 ### Added
 - idk
 
-## [x.x.x] 2026/02/22
+## [x.x.x] - 2026-02-22
 ### Added
 - Terms of Use and Privacy Policy pages.
 - LICENSE file.
@@ -105,11 +109,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Footer now links to Terms and Privacy.
 - README updated with project overview and setup.
 
-## [x.x.x] 2026/02/05
+## [x.x.x] - 2026-02-05
 ### Changed
 - Enforced global box-sizing and max-width safeguards for media to prevent overflow.
 
-## [x.x.x] 2026/02/05
+## [x.x.x] - 2026-02-05
 ### Added
 - Video show page with card click-through (outside the iframe) to open it.
 
@@ -117,14 +121,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Styled the video show layout to match other show pages.
 - Prevented show layouts and media from overflowing the viewport width.
 
-## [x.x.x] 2026/02/05
+## [x.x.x] - 2026-02-05
 ### Changed
 - Hide featured sections on the home page when there is no content to display.
 - Truncated project titles and descriptions on the projects index view.
 - Applied the same title/description truncation rules to blog post cards.
 - Applied the same title/description truncation rules to video cards.
 
-## [x.x.x] 2026/02/05
+## [x.x.x] - 2026-02-05
 ### Changed
 - Refactored home, blog post, project, and video views into reusable card partials.
 - Cleaned up HTML structure and removed inline styling.
@@ -132,30 +136,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Standardized layout and card styling with shared variables, sizing, and spacing tweaks.
 - Removed `hr` separators from home and nav layout and dropped related styles.
 
-## [x.x.x] 2026/01/24
+## [x.x.x] - 2026-01-24
 ### Changed
 - Extracted controller logic into service objects to standardize flows across the app.
 - Added domain-scoped services for data loading and CRUD operations to slim controllers.
 
-## [x.x.x] 2026/01/22
+## [x.x.x] - 2026-01-22
 ### Changed
 - It's not 2025 anymore u dillo
 
-## [x.x.x] 2026/01/22
+## [x.x.x] - 2026-01-22
 ### Removed
 - Email from contact page, getting spam lol
 
-## [x.x.x] 2025/10/03
+## [x.x.x] - 2025-10-03
 ### Added
 - project5.png
     - New image for minibike project
 
-## [x.x.x] 2025/02/27
+## [x.x.x] - 2025-02-27
 ### Changed
 - project4.png
     - Updated image for this project
 
-## [x.x.x] 2025/02/17
+## [x.x.x] - 2025-02-17
 ### Create Blog Post from Front End, auth before doing so (for projects too)
 
 ### Added
@@ -174,14 +178,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - blog_posts/show.html.erb
     - Closing that div
 
-## [x.x.x] 2025/02/17
+## [x.x.x] - 2025-02-17
 ### Quick Fix
 
 ### Changed
 - blog_posts/show.html.erb
     - Closing that div
 
-## [x.x.x] 2025/02/17
+## [x.x.x] - 2025-02-17
 ### Footer
 
 ### Added
@@ -195,25 +199,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - stylesheets/application.scss
     - Styling for footer
 
-## [x.x.x] 2025/02/17
+## [x.x.x] - 2025-02-17
 ### Project, Blog Post Cleanup
 
 ### Changed
-- projects/show.html.erb, blog_posts/show.html.erb, 
+- projects/show.html.erb, blog_posts/show.html.erb,
     - Removing unnecessary bloat
     - More accurately describing links
     - Link to 'see more' on project show if url present
 - home/index.html.erb
     - Centering subheading
 
-## [x.x.x] 2025/02/16
+## [x.x.x] - 2025-02-16
 ### Image sizing
 
 ### Changed
 - project4.png
     - correct sizing
 
-## [x.x.x] 2025/02/11
+## [x.x.x] - 2025-02-11
 ### Project front end cleanup
 
 ### Changed
@@ -221,7 +225,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
     - Wrapping in 'project' class
     - showing actual image on front end
 
-## [x.x.x] 2025/02/11
+## [x.x.x] - 2025-02-11
 ### New project post for 55 cage
 
 ### Added
@@ -231,7 +235,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - projects/show.html.erb
     - Removing unnecessary fields from front end
 
-## [x.x.x] 2024/11/16
+## [x.x.x] - 2024-11-16
 ### Admin Section | Devise | Create new Projects
 
 ### Added
@@ -248,14 +252,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - user.rb model
     - To prevent user from adding approved to their own account
 
-## [x.x.x] 2024/11/16
+## [x.x.x] - 2024-11-16
 ### Good update, shitty highway
 
 ### Changed
 - application.scss
     - Mobile support
 
-## [x.x.x] 2024/11/10
+## [x.x.x] - 2024-11-10
 ### Addressing some initial concerns
 
 ### Added
@@ -265,7 +269,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - application.scss
     - Mobile support
 
-## [x.x.x] 2024/11/09
+## [x.x.x] - 2024-11-09
 ### You get on Heroku, Front End Cleanup
 ### https://devcenter.heroku.com/articles/getting-started-with-rails7#create-a-new-or-upgrade-an-existing-rails-app
 
@@ -282,13 +286,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - home/index.html.erb
     - Featured sections cleaned up
 - Other views also cleaned up to properly display content
-- 
+-
 
 ### Removed
 - video show file serves no purpose
 
-## [x.x.x] 2024/11/09
-### 
+## [x.x.x] - 2024-11-09
+###
 
 ### Changed
 - database.yml
@@ -299,7 +303,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
     - border radius on images
 - removing some other unnecessary bloat from related files (things like 'blog' as a heading, etc)
 
-## [x.x.x] 2024/11/09
+## [x.x.x] - 2024-11-09
 ### Adding site content, other minor updates to front end
 
 ### Added
@@ -314,7 +318,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - _nav.html.erb
     - Referenced News & Events instead of Blog
 
-## [x.x.x] 2024/11/02
+## [x.x.x] - 2024-11-02
 ### Makadafrontendgood
 
 ### Added
@@ -339,7 +343,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - contact.html.erb
     - Updated to display appropriate contact_info.yml
 
-## [x.x.x] 2024/11/01
+## [x.x.x] - 2024-11-01
 ### Conversion
 
 ### Changed
@@ -352,14 +356,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Moved navbar into it's own shared folder like it should be..
 - Should have also changed Title in application.html.erb
 
-## [x.x.x] 2024/10/19
+## [x.x.x] - 2024-10-19
 ## New Release
 
 ## Changed
 - README.md
     - Updated documentation
 
-## [x.x.x] 2024/10/19
+## [x.x.x] - 2024-10-19
 ## Implementing Sass (npm install -g sass)
 
 ### Added
@@ -374,7 +378,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Removed
 - application.css
 
-## [x.x.x] 2024/10/19
+## [x.x.x] - 2024-10-19
 ## Other featured migrations
 
 ## Added
@@ -386,7 +390,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - seeds.rb
     - Updated to add 'featured' data
 
-## [x.x.x] 2024/10/19
+## [x.x.x] - 2024-10-19
 ## Migration for better featured blog post control
 
 ## Added
@@ -398,7 +402,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - seeds.rb
     - Updated to add 'featured' data
 
-## [x.x.x] 2024/10/18
+## [x.x.x] - 2024-10-18
 ## Seed refactoring
 
 ## Added
@@ -413,7 +417,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - seeds/{#model}.rb
     - Moved seed info into their own files
 
-## [x.x.x] 2024/10/18
+## [x.x.x] - 2024-10-18
 ## Addressing some initial concerns, seed file upgrade (continued)
 
 ### Added
@@ -430,7 +434,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - seeds.rb
     - Added starter content for each model in the DB, with references to this file as necessary.
 - blog_posts/index.html.erb
-    - Displaying all blog posts now. 
+    - Displaying all blog posts now.
     - Featured blog_posts remain on the index
 - blog_posts_controller.rb
     - @blog_posts = all blog posts
@@ -444,7 +448,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## Removed
 - n/a
 
-## [x.x.x] 2024/10/17
+## [x.x.x] - 2024-10-17
 
 ### Added
 - n/a
@@ -461,16 +465,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - n/a
 
-### Security 
+### Security
 - n/a
 
 ---
 
-## [Unreleased] 2024/10/17
+## [Unreleased] - 2024-10-17
 ## Task index and show, seed file to populate data
 
 ### Added
-- 
+-
 
 ### Changed
 - tasks_controller.rb
@@ -483,9 +487,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
     - Some dummy data to populate the database with rails db:seed
 
 ### Removed
-- 
+-
 
-## [Unreleased] 2024/10/17
+## [Unreleased] - 2024-10-17
 ## Creating an About Section
 
 ### Added
@@ -501,7 +505,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - home_controller.rb
     - @about = action to add on it's own controller
 
-## [Unreleased] 2024/10/16
+## [Unreleased] - 2024-10-16
 ## Displaying content appropriately, timezone update, YAML File
 
 ### Added
@@ -523,7 +527,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - README.md
     - Referenced this file
 
-## [Unreleased] 2024/10/16
+## [Unreleased] - 2024-10-16
 ## Initial Site Framework and Navbar
 
 ### Added
@@ -540,7 +544,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 - application.html.erb
-    - navbar is rendered here 
+    - navbar is rendered here
 - routes.rb
     - Index established (home#index)
     - Other routes set to page#index
