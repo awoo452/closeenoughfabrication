@@ -8,18 +8,20 @@ Welcome to the closeenoughfabrication app. This is a Rails application that serv
 - **Public Pages:** Includes About and Contact pages.
 - **Project & Video Listings:** Browse all projects and videos with individual detail pages.
 
-## Tech Stack
+## Setup
 
-- **Ruby:** 4.0.2
-- **Rails:** 8.1.2
-- **Bootstrap:** 5
-- **SassC**
+Prereqs: Ruby 4.0.2, Rails 8.1.2, Bootstrap 5, SassC.
 
-## Local Development
+1. `bundle install`
 
-1. Install Ruby 4.0.2.
-2. Run `bundle install`.
-3. Start the server with `bin/rails server`.
+## Run
+
+1. `bin/rails server`
+
+## Tests
+
+1. `bin/rails test`
+2. `bin/rails test:system`
 
 ## Changelog
 
