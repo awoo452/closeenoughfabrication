@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.20] - 2026-03-27
+### Changed
+- Updated debug to 1.11.1.
+- Updated turbo-rails to 2.0.23.
+- Updated web-console to 4.3.0.
+- Updated selenium-webdriver to 4.41.0.
+- Updated importmap-rails to 2.2.3.
+- Updated jbuilder to 2.14.1.
+- Updated bootsnap to 1.23.0.
+
 ## [1.0.19] - 2026-03-27
 ### Changed
 - Updated Rails to 8.1.3 to address CVE-2026-33658.
